@@ -1,1 +1,1 @@
-CatVoid is a group assignment for the Game Development major in UBAYA
+CatVoid is being developed by Bounce Studio as an assignment for the Game Concept and Design class in UBAYA
