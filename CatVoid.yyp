@@ -9,7 +9,11 @@
     "name":"Default",
   },
   "defaultScriptType":0,
-  "Folders":[],
+  "Folders":[
+    {"$GMFolder":"","%Name":"Assets","folderPath":"folders/Assets.yy","name":"Assets","resourceType":"GMFolder","resourceVersion":"2.0",},
+    {"$GMFolder":"","%Name":"Objects","folderPath":"folders/Objects.yy","name":"Objects","resourceType":"GMFolder","resourceVersion":"2.0",},
+    {"$GMFolder":"","%Name":"Rooms","folderPath":"folders/Rooms.yy","name":"Rooms","resourceType":"GMFolder","resourceVersion":"2.0",},
+  ],
   "ForcedPrefabProjectReferences":[],
   "IncludedFiles":[],
   "isEcma":false,
@@ -19,12 +23,14 @@
   },
   "name":"CatVoid",
   "resources":[
-    {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
+    {"id":{"name":"ObjPlayer","path":"objects/ObjPlayer/ObjPlayer.yy",},},
+    {"id":{"name":"Test","path":"rooms/Test/Test.yy",},},
+    {"id":{"name":"Sprite1","path":"sprites/Sprite1/Sprite1.yy",},},
   ],
   "resourceType":"GMProject",
   "resourceVersion":"2.0",
   "RoomOrderNodes":[
-    {"roomId":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
+    {"roomId":{"name":"Test","path":"rooms/Test/Test.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[
