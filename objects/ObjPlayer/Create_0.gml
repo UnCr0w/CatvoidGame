@@ -7,6 +7,7 @@ speedx = 0;
 speedy = 0;
 
 isSprint = true;
+isSneak = true;
 Normalize = function(_x, _y){
 	x = _x;
 	y = _y;
