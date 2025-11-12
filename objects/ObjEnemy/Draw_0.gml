@@ -1,1 +1,0 @@
-draw_circle_colour(x, y, 100, c_lime, c_blue, true);
