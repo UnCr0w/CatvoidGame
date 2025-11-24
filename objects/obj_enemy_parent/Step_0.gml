@@ -1,4 +1,8 @@
-var _vertical = clamp(target_x - x, -1, 1);
-var _horizontal = clamp(target_y - y, -1, 1);
+if (has_los)
+{
+    if (mp_grid_path(global.grid, path, x, y, target_x, target_y, false))
+    {
+        path_start(path, move_speed, path_action_continue, false);
+    }
+}    
 
-move_and_collide(_vertical * move_speed, _horizontal * move_speed, [tilemap, obj_wall, obj_enemy_parent]);

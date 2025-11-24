@@ -1,0 +1,1 @@
+global.global_target_spawn = target_spawn_id;
