@@ -28,16 +28,24 @@ if (inst != noone and keyboard_check_pressed(ord("F")))
     room_goto(inst.target_room);
 }
 
-if (keyboard_check_pressed(vk_space))
-{
-    instance_create_layer(x, y, "Instances", obj_attack);
-}
-
-
-
-
 if (_horizontal != 0 or _vertical != 0)
 {
-    if (_horizontal > 0) sprite_index = mc_right
-        else if (_horizontal < 0) sprite_index = mc_left
+    if (_horizontal > 0) 
+    {
+        sprite_index = mc_right;
+        
+    }
+    else if (_horizontal < 0) 
+    {
+        sprite_index = mc_left;
+        
+    }
+}
+
+if (keyboard_check_pressed(vk_space)) 
+{
+    if (sprite_index == mc_left)
+        instance_create_layer(bbox_left - 64, y, "Instances", obj_attack);
+    else if (sprite_index == mc_right)
+        instance_create_layer(bbox_right, y, "Instances", obj_attack);
 }
