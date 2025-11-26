@@ -28,6 +28,11 @@ if (inst != noone and keyboard_check_pressed(ord("F")))
     room_goto(inst.target_room);
 }
 
+if (keyboard_check_pressed(vk_space))
+{
+    instance_create_layer(x, y, "Instances", obj_attack);
+}
+
 
 
 
