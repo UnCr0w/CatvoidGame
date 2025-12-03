@@ -21,7 +21,7 @@ function enemy_state_idle(){
         target_x = random_range(xstart - 100, xstart + 100);
         target_y = random_range(ystart - 100, ystart + 100);
         has_los = true;
-        idle_timer = 60;
+        idle_timer = 120;
     }
     
     
@@ -73,7 +73,7 @@ function enemy_state_attack(){
     {
         attack_timer++;
         
-        if (attack_timer >= 60)
+        if (attack_timer >= 120)
         {
             attack_timer = 0;
             attack_phase = ATTACK_STATES.CHARGE;

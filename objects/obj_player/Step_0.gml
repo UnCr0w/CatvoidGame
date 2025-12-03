@@ -19,7 +19,7 @@ else
 }
     
 if (keyboard_check_pressed(vk_f2))
-    room_goto_next();
+    room_goto(combat_room);
 
 var inst = instance_place(x, y, obj_warp);
 

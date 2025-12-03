@@ -21,6 +21,7 @@ if (has_los and state != STATES.ATTACKING)
 if (state = STATES.ATTACKING){
     if (instance_place(x, y, obj_player)){
         room_goto(combat_room);
+        global.current_turn = TURN.ENEMY;
     }
 }
 
