@@ -1,0 +1,46 @@
+[
+  {
+    "name": "Scratch",
+    "type": "basic",
+    "base_damage": 0,
+    "scale": 1,
+    "owner": "mc",
+    "sprite": "card_temporary",
+    "effect": "card_effect_damage",
+    "revelation": 1,
+    "desc": "Single target, 100% damage to an enemy from MC’s atk%. Gain 1 revelation point."
+  },
+  {
+    "name": "Vicious Cat",
+    "type": "skill",
+    "base_damage": 0,
+    "scale": 1,
+    "owner": "mc",
+    "sprite": "Vicious_Cat",
+    "effect": "card_effect_apply_status",
+    "revelation": 1,
+    "desc": ""
+  },
+  {
+    "name": "Cat's Paw",
+    "type": "skill",
+    "base_damage": 20,
+    "scale": 1,
+    "owner": "mc",
+    "sprite": "Cats_Paw",
+    "effect": "card_effect_damage",
+    "revelation": 1,
+    "desc": ""
+  },
+  {
+    "name": "Phawser Beam",
+    "type": "skill",
+    "base_damage": 30,
+    "scale": 1,
+    "owner": "mc",
+    "sprite": "card_temporary",
+    "effect": "card_effect_damage",
+    "revelation": 1,
+    "desc": ""
+  }
+]

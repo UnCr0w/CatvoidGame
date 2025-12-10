@@ -1,8 +1,8 @@
 {
   "$GMSprite":"v2",
   "%Name":"window",
-  "bboxMode":0,
-  "bbox_bottom":58,
+  "bboxMode":2,
+  "bbox_bottom":75,
   "bbox_left":4,
   "bbox_right":27,
   "bbox_top":3,

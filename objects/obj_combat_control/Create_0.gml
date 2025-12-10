@@ -4,6 +4,7 @@ var slot_x = [200, 248, 296, 344, 392];
 var slot_y = 48;
 
 active_slots = [];
+active_cards = [];
 draw_pile = [];
 hand = [];
 discard_pile = [];
@@ -19,7 +20,7 @@ for (i = 0; i < array_length(global.party); i++)
     
     array_push(active_slots, instance_create_layer(slot_x[i+1], slot_y, "Instances", obj_card_slot));
     
-    var my_cards = global.hero.card_list;
+    var my_cards = global.party[i].card_list;
     for (j = 0; j < array_length(my_cards); j++){
         var store_card = my_cards[j].clone();
         
@@ -32,5 +33,5 @@ show_debug_message(string(global.current_turn));
 
 draw_pile = array_shuffle(draw_pile);
 draw_cards(5);  
-
+create_card_visuals();
 

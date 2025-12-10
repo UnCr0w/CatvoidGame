@@ -5,6 +5,6 @@ if (global.current_turn == TURN.ENEMY){
     global.current_turn = TURN.PLAYER;
 }
 
-if (hp == 0){
+if (hp <= 0){
     global.current_turn = TURN.WIN;
 }

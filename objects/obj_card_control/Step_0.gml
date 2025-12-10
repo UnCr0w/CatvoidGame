@@ -1,11 +1,10 @@
-if (hand == [])
-{
-    draw_cards(5);
-    create_card_visuals();
-    show_debug_message("Re-creating cards");
+if (array_length(hand) == 0){
+    draw_pile = discard_pile;
+    show_debug_message(draw_pile);
+    show_debug_message(hand);
+    show_debug_message(discard_pile);
 }
-
 if(global.current_turn == TURN.WIN){
     combat_won();
-    room_goto(Test);
+    room_goto(global.current_room);
 }

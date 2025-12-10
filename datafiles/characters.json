@@ -1,0 +1,24 @@
+[
+  {
+    "name": "mc",
+    "role": "DPS, Stealth",
+    "path": "Magic",
+    "revelation_point": 9,
+    "hp": 100,
+    "atk": 150,
+    "def": 80,
+    "acc": 100,
+    "sprite": "mc_right"
+  },
+  {
+    "name": "Toby",
+    "role": "Support, healing",
+    "path": "Magic",
+    "revelation_point": 7,
+    "hp": 150,
+    "atk": 100,
+    "def": 100,
+    "acc": 80,
+    "sprite": ""
+  }
+]

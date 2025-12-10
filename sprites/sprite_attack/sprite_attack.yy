@@ -23,7 +23,7 @@
   ],
   "name":"sprite_attack",
   "nineSlice":null,
-  "origin":3,
+  "origin":4,
   "parent":{
     "name":"Assets",
     "path":"folders/Assets.yy",
@@ -75,7 +75,7 @@
     ],
     "visibleRange":null,
     "volume":1.0,
-    "xorigin":0,
+    "xorigin":32,
     "yorigin":32,
   },
   "swatchColours":null,

@@ -19,6 +19,10 @@ function end_enemy_turn(){
 function combat_won(){
     show_debug_message("You won!");
 }
+
+function combat_lost(){
+    show_debug_message("You lost!");
+}
 function draw_cards(_amount) {
     repeat(_amount) {
         if (array_length(draw_pile) > 0) {
@@ -29,14 +33,8 @@ function draw_cards(_amount) {
 }
 
 function play_card(_card_index, _target_enemy) {
-    var _card = hand[_card_index];
-    
-    with (_card) {
-        effect(_target_enemy); 
-    }
-    
-    array_delete(hand, _card_index, 1);
-    array_push(discard_pile, _card);
+    var _card = active_cards[_card_index];
+    _card.card_data.effect(_target_enemy);
 }
 
 function create_card_visuals(){

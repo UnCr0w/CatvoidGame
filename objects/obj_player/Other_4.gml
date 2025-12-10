@@ -1,4 +1,4 @@
-
+//so player spawns on the spawn position
     if (variable_global_exists("global_target_spawn")) {
     
     // Find the spawn point object that matches the ID string
@@ -10,3 +10,5 @@
             }
         }
     }
+
+global.current_room = room;
