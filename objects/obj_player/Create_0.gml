@@ -1,3 +1,4 @@
+canMove = true;
 move_speed = 1;
 isSneak = false;
 

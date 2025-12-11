@@ -2,6 +2,11 @@
 var _horizontal = keyboard_check(ord("D")) - keyboard_check(ord("A"));
 var _vertical = keyboard_check(ord("S")) - keyboard_check((ord("W")));
 
+if (canMove == true)
+    move_speed = 1;
+else
+    move_speed = 0;
+
 //Cuz me keyboard broken
 if (keyboard_check(vk_alt))
 {
@@ -59,8 +64,13 @@ if (_horizontal != 0 or _vertical != 0)
 //attackkk
 if (keyboard_check_pressed(vk_space)) 
 {
+    canMove = false;
+    show_debug_message("no move")
     if (sprite_index == mc_left)
         instance_create_layer(x, y, "Instances", obj_attack);
     else if (sprite_index == mc_right)
         instance_create_layer(x, y, "Instances", obj_attack);
 }
+
+if (!instance_exists(obj_attack))
+        canMove = true;

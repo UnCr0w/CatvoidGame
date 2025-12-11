@@ -28,8 +28,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"wall_grey",
-    "path":"sprites/wall_grey/wall_grey.yy",
+    "name":"wall_grey_uncollide",
+    "path":"sprites/wall_grey_uncollide/wall_grey_uncollide.yy",
   },
   "spriteMaskId":null,
   "visible":true,
