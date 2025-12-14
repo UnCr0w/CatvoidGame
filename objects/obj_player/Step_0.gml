@@ -1,6 +1,6 @@
 //Movement - true = 1, false = 0
 var _horizontal = keyboard_check(ord("D")) - keyboard_check(ord("A"));
-var _vertical = keyboard_check(ord("S")) - keyboard_check((ord("W")));
+_vertical = keyboard_check(ord("S")) - keyboard_check((ord("W")));
 
 if (canMove == true)
     move_speed = 1;
@@ -37,12 +37,14 @@ var inst = instance_place(x, y, obj_warp);
 
 if (inst != noone and keyboard_check_pressed(ord("F")))
 {
+    if (instance_exists(obj_warp) && obj_warp.isLocked == false){
     if (!instance_exists(obj_transition))
     {
     var transition_inst = instance_create_depth(0, 0, -9999, obj_transition);
     
     transition_inst.target_room = inst.target_room;
     transition_inst.target_spawn = inst.target_spawn_id;
+    }
     }
 }
 
@@ -51,13 +53,26 @@ if (_horizontal != 0 or _vertical != 0)
 {
     if (_horizontal > 0) 
     {
-        sprite_index = mc_right;
+        sprite_index = walk_right;
         
     }
     else if (_horizontal < 0) 
     {
-        sprite_index = mc_left;
-        
+        sprite_index = walk_left;
+    }
+    
+    if (sprite_index == mc_left && abs(_vertical) == 1){
+        sprite_index = walk_left;
+    } else if (sprite_index == mc_right && abs(_vertical) == 1){
+        sprite_index = walk_right;
+    }
+} else {
+	if (_horizontal == 0){
+        if (sprite_index == walk_right){
+            sprite_index = mc_right
+        } else if (sprite_index == walk_left){ 
+            sprite_index = mc_left
+        }
     }
 }
 
@@ -66,10 +81,7 @@ if (keyboard_check_pressed(vk_space))
 {
     canMove = false;
     show_debug_message("no move")
-    if (sprite_index == mc_left)
-        instance_create_layer(x, y, "Instances", obj_attack);
-    else if (sprite_index == mc_right)
-        instance_create_layer(x, y, "Instances", obj_attack);
+    instance_create_depth(x, y, -9999, obj_attack)
 }
 
 if (!instance_exists(obj_attack))

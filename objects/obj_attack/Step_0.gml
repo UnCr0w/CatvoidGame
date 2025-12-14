@@ -18,3 +18,9 @@ if(instance_place(x, y, obj_enemy))
     }
     global.current_turn = TURN.PLAYER;
 }
+
+if (instance_place(x, y, obj_warp)){
+    with(obj_warp){
+        isLocked = false;
+    }
+}

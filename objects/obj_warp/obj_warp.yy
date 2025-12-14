@@ -30,6 +30,7 @@
         "GMRoom",
       ],"listItems":[],"multiselect":false,"name":"target_room","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resource":{"name":"Test","path":"rooms/Test/Test.yy",},"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"Test","varType":5,},
     {"$GMObjectProperty":"v2","%Name":"target_spawn_id","filters":[],"listItems":[],"multiselect":false,"name":"target_spawn_id","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"","varType":2,},
+    {"$GMObjectProperty":"v2","%Name":"isLocked","filters":[],"listItems":[],"multiselect":false,"name":"isLocked","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"True","varType":3,},
   ],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
