@@ -4,12 +4,21 @@ global.function_map = {
 }
 
 function CardData(_struct_from_json) constructor{
-    name = _struct_from_json.name;
-    type = _struct_from_json.type;
-    base_damage = _struct_from_json.base_damage;
-    scale = _struct_from_json.scale;
-    owner = _struct_from_json.owner;
-    sprite = asset_get_index(_struct_from_json.sprite);
+    name = _struct_from_json[$ "name"] ?? "Unknown";
+    type = _struct_from_json[$ "type"] ?? "basic";
+    base_damage = _struct_from_json[$ "base_damage"] ?? 0;
+    scale = _struct_from_json[$ "scale"] ?? 0;
+    owner = _struct_from_json[$ "owner"] ?? "none";
+    target = _struct_from_json[$ "target"] ?? "enemy";
+    revelation = _struct_from_json[$ "revelation"] ?? 0;
+    desc = _struct_from_json[$ "desc"] ?? "";
+    status_apply = _struct_from_json[$ "status"] ?? _struct_from_json[$ "status_apply"];
+    input_sprite = _struct_from_json[$ "sprite"];
+    if (is_string(input_sprite)) {
+        sprite = asset_get_index(input_sprite);
+    } else {
+        sprite = input_sprite; // It's already an ID from cloning
+    }
     
     var _input_effect = _struct_from_json[$ "effect"];
 
@@ -49,6 +58,8 @@ function CardData(_struct_from_json) constructor{
             scale: scale,
             owner: owner,
             sprite: sprite,
+            target: target,
+            status_apply: status_apply,
             effect: effect,
             revelation: revelation,
             desc: desc

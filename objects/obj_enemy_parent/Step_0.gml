@@ -1,3 +1,6 @@
+if (instance_exists(obj_dialog)) exit;
+    
+if (instance_exists(obj_transition)) exit;
 switch (state) {
 	case (STATES.IDLE):
         enemy_state_idle();

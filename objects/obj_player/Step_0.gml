@@ -1,3 +1,16 @@
+if (instance_exists(obj_dialog)) exit;
+    
+if (keyboard_check_pressed(ord("F"))){
+    create_dialogue(
+        [
+        {
+            name: "Test Dialogue!",
+            msg: "It works!"
+        }
+        ]
+    )
+}
+
 //Movement - true = 1, false = 0
 var _horizontal = keyboard_check(ord("D")) - keyboard_check(ord("A"));
 _vertical = keyboard_check(ord("S")) - keyboard_check((ord("W")));
@@ -61,18 +74,35 @@ if (_horizontal != 0 or _vertical != 0)
         sprite_index = walk_left;
     }
     
-    if (sprite_index == mc_left && abs(_vertical) == 1){
-        sprite_index = walk_left;
-    } else if (sprite_index == mc_right && abs(_vertical) == 1){
-        sprite_index = walk_right;
+    if (_vertical > 0){
+        if (sprite_index == walk_left || sprite_index == mc_left || sprite_index == mc_up_left)
+            sprite_index = walk_down_left;
+        else if (sprite_index == walk_right || sprite_index == mc_right || sprite_index == mc_up_right)
+            sprite_index = walk_down_right;
+    } else if (_vertical < 0){
+        if (sprite_index == walk_left || sprite_index == mc_left)
+            sprite_index = walk_up_left;
+        else if (sprite_index == walk_right || sprite_index == mc_right)
+            sprite_index = walk_up_right;
     }
 } else {
 	if (_horizontal == 0){
         if (sprite_index == walk_right){
-            sprite_index = mc_right
+            sprite_index = mc_right;
         } else if (sprite_index == walk_left){ 
-            sprite_index = mc_left
+            sprite_index = mc_left;
         }
+    }
+    
+    if (_vertical == 0){
+        if (sprite_index == walk_up_left) 
+            sprite_index = mc_up_left;
+        else if (sprite_index == walk_up_right)
+            sprite_index = mc_up_right 
+        else if (sprite_index == walk_down_left)
+            sprite_index = mc_left;
+        else if (sprite_index == walk_down_right)
+            sprite_index = mc_right;
     }
 }
 

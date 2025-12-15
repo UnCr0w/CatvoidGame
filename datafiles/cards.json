@@ -8,6 +8,8 @@
     "sprite": "card_temporary",
     "effect": "card_effect_damage",
     "revelation": 1,
+    "target": "enemy",
+    "status": "none",
     "desc": "Single target, 100% damage to an enemy from MC’s atk%. Gain 1 revelation point."
   },
   {
@@ -19,6 +21,8 @@
     "sprite": "Vicious_Cat",
     "effect": "card_effect_apply_status",
     "revelation": 1,
+    "target": "self",
+    "status": "Hide",
     "desc": ""
   },
   {
@@ -30,6 +34,8 @@
     "sprite": "Cats_Paw",
     "effect": "card_effect_damage",
     "revelation": 1,
+    "target": "enemy",
+    "status": "none",
     "desc": ""
   },
   {
@@ -41,6 +47,8 @@
     "sprite": "card_temporary",
     "effect": "card_effect_damage",
     "revelation": 1,
+    "target": "enemy",
+    "status": "none",
     "desc": ""
   }
 ]

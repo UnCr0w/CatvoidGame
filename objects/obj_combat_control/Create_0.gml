@@ -13,7 +13,7 @@ array_push(active_slots, instance_create_layer(slot_x[0], slot_y, "Instances", o
 for (i = 0; i < array_length(global.party); i++)
 {
     var _char_struct = global.party[i]
-    var _inst = instance_create_layer(position_x[0], position_y[0], "Instances", obj_battle_unit)
+    var _inst = instance_create_layer(position_x[i], position_y[i], "Instances", obj_battle_unit);
     _inst.stats = _char_struct;
     _inst.sprite_index = _char_struct.sprite_battle;
     show_debug_message(_inst.stats);
@@ -23,7 +23,7 @@ for (i = 0; i < array_length(global.party); i++)
     var my_cards = global.party[i].card_list;
     for (j = 0; j < array_length(my_cards); j++){
         var store_card = my_cards[j].clone();
-        
+        store_card.owner = _inst;
         array_push(draw_pile, store_card);
     }
 }
