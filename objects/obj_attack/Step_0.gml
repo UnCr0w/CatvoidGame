@@ -19,8 +19,16 @@ if(instance_place(x, y, obj_enemy))
     global.current_turn = TURN.PLAYER;
 }
 
-if (instance_place(x, y, obj_warp)){
-    with(obj_warp){
-        isLocked = false;
+var hit_door = instance_place(x, y, obj_warp);
+
+if (hit_door != noone)
+{
+    // 2. Unlock THAT specific door instance
+    hit_door.isLocked = false; 
+    
+    // 3. Save this change to the global memory
+    // We use the door's unique 'door_id' as the key
+    if (variable_instance_exists(hit_door, "door_id")) {
+        global.world_state[$ hit_door.door_id] = true; 
     }
 }

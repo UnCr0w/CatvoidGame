@@ -1,15 +1,4 @@
 if (instance_exists(obj_dialog)) exit;
-    
-if (keyboard_check_pressed(ord("F"))){
-    create_dialogue(
-        [
-        {
-            name: "Test Dialogue!",
-            msg: "It works!"
-        }
-        ]
-    )
-}
 
 //Movement - true = 1, false = 0
 var _horizontal = keyboard_check(ord("D")) - keyboard_check(ord("A"));
@@ -41,22 +30,35 @@ else
         move_and_collide(lengthdir_x(move_speed, move_dir), lengthdir_y(move_speed, move_dir), [tilemap, obj_solid], undefined, undefined, undefined, lengthdir_x(move_speed, move_dir), lengthdir_y(move_speed, move_dir));   
     }
 }
-//for testing only
-if (keyboard_check_pressed(vk_f2))
-    room_goto(combat_room);
 
 //for fancy transition
 var inst = instance_place(x, y, obj_warp);
 
 if (inst != noone and keyboard_check_pressed(ord("F")))
 {
-    if (instance_exists(obj_warp) && obj_warp.isLocked == false){
+    if (inst.isLocked){
+        create_dialogue([
+        {
+            name: "",
+            msg: "This door is locked!"
+        },
+        {
+            name: "",
+            msg: "Perhaps there is a key somewhere..."
+        },
+        {
+            name: "",
+            msg: "Or you could just break it!"
+        }
+        ])
+    } else if (inst.isLocked == false){
     if (!instance_exists(obj_transition))
     {
     var transition_inst = instance_create_depth(0, 0, -9999, obj_transition);
     
     transition_inst.target_room = inst.target_room;
-    transition_inst.target_spawn = inst.target_spawn_id;
+    transition_inst.target_spawn = inst.target_spawn_id; 
+        global.global_target_spawn = inst.target_spawn_id;
     }
     }
 }

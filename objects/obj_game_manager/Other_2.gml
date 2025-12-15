@@ -1,6 +1,6 @@
 load_card_database();
 load_character_database();
-
+    
 
     var _character_data = global.character_library[$ "mc"]; 
     array_push(global.party, _character_data);
@@ -19,3 +19,8 @@ load_character_database();
         }
     }
 }
+
+global.world_state = {
+    "test_room": true,
+    "bedroom_mc": false
+};

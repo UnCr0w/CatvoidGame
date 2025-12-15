@@ -9,6 +9,7 @@ _dx += 16;
 _dy += 32;
 
 draw_set_halign(fa_left);
+draw_set_colour(c_white);
 draw_set_font(TextBox);
 
 var _name = messages[current_message].name;

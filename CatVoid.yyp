@@ -60,6 +60,7 @@
     {"id":{"name":"obj_window","path":"objects/obj_window/obj_window.yy",},},
     {"id":{"name":"bedroom","path":"rooms/bedroom/bedroom.yy",},},
     {"id":{"name":"combat_room","path":"rooms/combat_room/combat_room.yy",},},
+    {"id":{"name":"hallway","path":"rooms/hallway/hallway.yy",},},
     {"id":{"name":"loading_screen","path":"rooms/loading_screen/loading_screen.yy",},},
     {"id":{"name":"Test","path":"rooms/Test/Test.yy",},},
     {"id":{"name":"card_control","path":"scripts/card_control/card_control.yy",},},
@@ -82,6 +83,7 @@
     {"id":{"name":"Cats_Paw","path":"sprites/Cats_Paw/Cats_Paw.yy",},},
     {"id":{"name":"enemy_placeholder","path":"sprites/enemy_placeholder/enemy_placeholder.yy",},},
     {"id":{"name":"floor_wood","path":"sprites/floor_wood/floor_wood.yy",},},
+    {"id":{"name":"Kale_enemy","path":"sprites/Kale_enemy/Kale_enemy.yy",},},
     {"id":{"name":"MainMenu","path":"sprites/MainMenu/MainMenu.yy",},},
     {"id":{"name":"mc_left","path":"sprites/mc_left/mc_left.yy",},},
     {"id":{"name":"mc_right","path":"sprites/mc_right/mc_right.yy",},},
@@ -116,6 +118,7 @@
     {"roomId":{"name":"bedroom","path":"rooms/bedroom/bedroom.yy",},},
     {"roomId":{"name":"Test","path":"rooms/Test/Test.yy",},},
     {"roomId":{"name":"combat_room","path":"rooms/combat_room/combat_room.yy",},},
+    {"roomId":{"name":"hallway","path":"rooms/hallway/hallway.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[
