@@ -1,3 +1,4 @@
+
 load_card_database();
 load_character_database();
     
@@ -22,5 +23,12 @@ load_character_database();
 
 global.world_state = {
     "test_room": true,
-    "bedroom_mc": false
+    "bedroom_mc": false,
+    "hallway_bedroom": true,
+    "hallway_outside": true,
+    "dorm_outside": true
 };
+
+global.global_target_spawn = "";
+
+

@@ -28,3 +28,15 @@ if (state = STATES.ATTACKING){
     }
 }
 
+_horizontal = xprevious-x;
+_vertical = yprevious-y;
+
+if (_horizontal >= 0){
+    sprite_index = kale_right;
+} else if (_horizontal < 0){
+    sprite_index = kale_left
+} else if (_vertical >= 0){
+    sprite_index = kale_down;
+} else if (_vertical < 0){
+    sprite_index = kale_up;
+}

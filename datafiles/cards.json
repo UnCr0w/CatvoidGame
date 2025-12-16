@@ -44,9 +44,22 @@
     "base_damage": 30,
     "scale": 1,
     "owner": "mc",
-    "sprite": "card_temporary",
+    "sprite": "PhawserBeam",
     "effect": "card_effect_damage",
     "revelation": 1,
+    "target": "enemy",
+    "status": "none",
+    "desc": ""
+  },
+  {
+    "name": "Take Death As A Gift",
+    "type": "ultimate",
+    "base_damage": 30,
+    "scale": 1.5,
+    "owner": "mc",
+    "sprite": "Take_Death_As_A_Gift",
+    "effect": "card_effect_damage",
+    "revelation": 0,
     "target": "enemy",
     "status": "none",
     "desc": ""

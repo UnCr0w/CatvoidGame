@@ -59,6 +59,7 @@ if (inst != noone and keyboard_check_pressed(ord("F")))
     transition_inst.target_room = inst.target_room;
     transition_inst.target_spawn = inst.target_spawn_id; 
         global.global_target_spawn = inst.target_spawn_id;
+        show_debug_message(global.global_target_spawn);
     }
     }
 }

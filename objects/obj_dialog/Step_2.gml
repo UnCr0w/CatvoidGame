@@ -9,6 +9,9 @@ if (current_char < string_length(_str)){
     current_message++;
     if (current_message >= array_length(messages)){
         instance_destroy();
+        if(room == void){
+            room_goto(bedroom);
+        }
     } else{
         current_char = 0;
     }

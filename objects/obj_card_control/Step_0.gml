@@ -6,5 +6,5 @@ if (array_length(hand) == 0){
 }
 if(global.current_turn == TURN.WIN){
     combat_won();
-    room_goto(global.current_room);
+    room_goto(thank_you);
 }

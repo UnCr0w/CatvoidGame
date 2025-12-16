@@ -33,8 +33,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"sprite_enemy",
-    "path":"sprites/sprite_enemy/sprite_enemy.yy",
+    "name":"kale_down",
+    "path":"sprites/kale_down/kale_down.yy",
   },
   "spriteMaskId":null,
   "visible":true,

@@ -17,7 +17,7 @@ function end_enemy_turn(){
 }
 
 function combat_won(){
-    show_debug_message("You won!");
+    room_goto(thank_you);
 }
 
 function combat_lost(){

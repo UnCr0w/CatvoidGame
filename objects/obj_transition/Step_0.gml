@@ -4,7 +4,6 @@ if (state == 0)
     
     if (alpha >= 1)
     {
-        global.global_target_spawn = target_spawn_id;
         room_goto(target_room);
         state = 1;
     } 

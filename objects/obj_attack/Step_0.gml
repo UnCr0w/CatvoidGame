@@ -21,7 +21,7 @@ if(instance_place(x, y, obj_enemy))
 
 var hit_door = instance_place(x, y, obj_warp);
 
-if (hit_door != noone)
+if (hit_door != noone && hit_door.isLocked)
 {
     // 2. Unlock THAT specific door instance
     hit_door.isLocked = false; 
@@ -31,4 +31,17 @@ if (hit_door != noone)
     if (variable_instance_exists(hit_door, "door_id")) {
         global.world_state[$ hit_door.door_id] = true; 
     }
+    if (object_exists(obj_door)){
+        instance_destroy(obj_door);
+    }
+    create_dialogue([
+    {
+        name: "",
+        msg: "You crash down the door!"
+    },
+    {
+        name: "",
+        msg: "Congratulations! You now have a broken door"
+    }
+    ])
 }
